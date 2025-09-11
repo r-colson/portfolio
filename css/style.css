@@ -1,0 +1,343 @@
+/* generic page styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--sans);
+  background-color: var(--black);
+  color: var(--white);
+  font-size: var(--font-size);
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+:root {
+  --black: #171321;
+  --dkblue: #0d314b;
+  --plum: #4b0d49;
+  --hotmag: #ff17e4;
+  --magenta: #e310cb;
+  --aqua: #86fbfb;
+  --white: #f7f8fa;
+  --font-size: 1.3rem;
+  --mono: "Oxygen mono", monospace;
+  --sans: Oxygen, sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  color: var(--magenta);
+}
+
+a:hover {
+  color: var(--hotmag);
+  text-decoration: none;
+}
+
+/* border-box declaration: https://css-tricks.com/box-sizing/ */
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img {
+  width: 100%;
+}
+
+/* variable declarations */
+:root {
+  --black: #171321;
+  --dkblue: #0d314b;
+  --plum: #4b0d49;
+  --hotmag: #ff17e4;
+  --magenta: #e310cb;
+  --aqua: #86fbfb;
+  --white: #f7f8fa;
+  --font-size: 1.3rem;
+  --mono: "Oxygen mono", monospace;
+  --sans: Oxygen, sans-serif;
+}
+
+/* navbar section */
+nav {
+  font-family: var(--mono);
+  font-size: 80%;
+  padding: 1rem;
+}
+
+nav h1 a {
+  font-family: var(--sans);
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  display: block;
+}
+
+nav a:hover,
+nav [class*="fa-"]:hover {
+  color: var(--magenta);
+}
+
+nav li:first-child {
+  flex-basis: 100%;
+  text-align: center;
+}
+
+nav [class*="fa-"] {
+  font-size: 150%;
+  color: var(--aqua);
+}
+
+.fa-solid.fa-laptop-code {
+  font-size: 100%;
+  margin-right: 10px;
+}
+
+/* navbar section > @media */
+@media (min-width: 850px) {
+  nav {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  nav li:first-child {
+    flex-basis: auto;
+    text-align: left;
+    margin-right: auto;
+  }
+}
+
+/* navbar > styling the resume "button" */
+.button {
+  background-color: var(--magenta);
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.button:hover {
+  color: var(--white);
+  background-color: var(--hotmag);
+}
+
+/* intro section */
+#intro {
+  padding-bottom: 2rem;
+  margin: 30px;
+  padding-top: 2rem;
+}
+
+#intro p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+#intro .name {
+  font-family: var(--mono);
+  font-size: 1rem;
+}
+
+#contact {
+  padding-top: 2em;
+  padding-bottom: 1em;
+}
+
+#contact p {
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+#contact h3 {
+  text-align: center;
+}
+
+.name span {
+  font-family: var(--sans);
+  font-size: 4rem;
+  color: var(--aqua);
+  display: block;
+  font-weight: 300;
+}
+
+/* still working on this section 
+the idea is to have it to the corner, layered underneath 
+the contact section using z-index */
+.intro-image {
+  width: 700px;
+  height: 650px;
+  position: absolute;
+  top: 150px;
+  right: -200px;
+  z-index: -1;
+}
+
+.intro-section {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+
+  @media screen and (max-width: 1200px) {
+    #globe {
+      display: none;
+    }
+  }
+
+
+/* contact section */
+#contact {
+  width: 400px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 1.5rem 0;
+}
+
+#contact p:last-child {
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact-background {
+  background-color: var(--plum);
+}
+
+/* contact section > email icon*/
+.email-icon {
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.email-icon:hover {
+  background-color: var(--hotmag);
+}
+
+/* projects section */
+.project-section {
+  background-color: var(--dkblue);
+}
+
+#projects {
+  padding: 4rem 1rem;
+}
+
+#projects h2 {
+  font-size: 2.5rem;
+  margin-bottom: calc(2.5rem * 1.5);
+}
+
+#projects h3 {
+  color: var(--aqua);
+}
+
+#projects h4 {
+  font-size: 1rem;
+  font-family: var(--mono);
+  margin: 0;
+}
+
+#projects ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  gap: 1rem;
+  font-size: 1rem;
+}
+
+#projects img {
+  margin: 2rem 0 4rem 0;
+  border-left: 1px solid var(--aqua);
+  border-top: 1px solid var(--aqua);
+  border-radius: 25px;
+  padding: 1rem;
+}
+
+.blackbox {
+  padding: 1rem;
+  background-color: var(--black);
+  border-radius: 10px;
+  color: var(--white);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+@media (min-width: 550px) {
+  article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .text {
+    order: 2;
+    text-align: right;
+  }
+
+  #projects ul {
+    justify-content: flex-end;
+  }
+}
+
+/* styling the footer sections */
+.footer-data,
+.footer-links,
+.footer-copyright {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.footer-data {
+  text-align: center;
+  margin: 0 auto;
+  padding: 3rem 0;
+}
+
+.gradient {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 23, 228, 1) 0%,
+    rgba(134, 251, 251, 1) 100%
+  );
+  height: 2px;
+}
+
+/* styling popup form */
+
+.form-container-1 {
+  max-width: inherit;
+  padding-bottom: .8rem;
+  padding-top: 0;
+  background-color: var(--plum);
+  color: #fff;
+  display: none;
+  text-align: center;
+}
