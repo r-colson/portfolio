@@ -330,6 +330,11 @@ the contact section using z-index */
   height: 2px;
 }
 
+.footer-img {
+  width: 200px;
+  height: 200px;
+}
+
 /* styling popup form */
 
 .form-container-1 {
