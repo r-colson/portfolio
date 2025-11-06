@@ -234,7 +234,6 @@ the contact section using z-index */
   text-decoration: none;
   font-size: 1.5rem;
   background-color: inherit;
-  border: none;
 }
 
 .email-icon:hover {
