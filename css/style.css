@@ -317,6 +317,10 @@ the contact section using z-index */
   margin-bottom: 1rem;
 }
 
+.footer-copyright {
+  font-size: 10px;
+}
+
 .footer-data {
   text-align: center;
   margin: 0 auto;
