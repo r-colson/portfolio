@@ -195,7 +195,15 @@ the contact section using z-index */
   position: absolute;
   top: 150px;
   right: -200px;
-  z-index: -1;
+}
+
+@keyframes mymove {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+
+.intro-image:hover {
+  animation: mymove 3s linear;
 }
 
 .intro-section {
