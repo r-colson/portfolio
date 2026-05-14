@@ -319,13 +319,14 @@ the contact section using z-index */
 
 .footer-copyright {
   font-size: 10px;
-  color: red;
+  color: white;
 }
 
 .footer-data {
   text-align: center;
   margin: 0 auto;
-  padding: 3rem 0;
+  padding: 3rem 0 0 0;
+  margin-bottom: 5px;
 }
 
 .gradient {
