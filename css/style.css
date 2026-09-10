@@ -21,6 +21,7 @@ h3 {
   --hotmag: #ff17e4;
   --magenta: #e310cb;
   --aqua: #86fbfb;
+  --input-bg: var(--aqua);
   --white: #f7f8fa;
   --font-size: 1.3rem;
   --mono: "Oxygen mono", monospace;
@@ -203,7 +204,7 @@ the contact section using z-index */
 }
 
 .intro-image:hover {
-  animation: mymove 3s linear;
+  animation: mymove 2.5s linear;
 }
 
 .intro-section {
@@ -212,13 +213,11 @@ the contact section using z-index */
   overflow: hidden;
 }
 
-
   @media screen and (max-width: 1200px) {
     #globe {
       display: none;
     }
   }
-
 
 /* contact section */
 #contact {
