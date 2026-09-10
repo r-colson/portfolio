@@ -7,5 +7,10 @@ function togglePopup() {
     document.querySelector(".form-container-1").style.display = "none";
   }
   clickCount++;
-  console.log(clickCount);
 }
+
+document.addEventListener('click', function(e) {
+  if (!e.target.closest('.contact-background') && !e.target.closest('.form-container-1')) {
+    document.querySelector(".form-container-1").style.display = "none";
+  }
+});

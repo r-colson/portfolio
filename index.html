@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -93,14 +93,13 @@
           me using the link below.
         </p>
         <p>
-          <a href="mailto:colsonr100@icloud.com"
-            ><span class="sr-only">Email</span></a
+          <button
+            class="email-icon"
+            onclick="togglePopup()"
+            aria-label="Open contact form"
           >
-          <span aria-hidden="true"
-            ><button class="email-icon" onclick="togglePopup()">
-              ✉️
-            </button></span
-          >
+            ✉️
+          </button>
         </p>
       </section>
     </div>
@@ -118,8 +117,10 @@
         </label>
         <label>
           Your message:
-          <textarea name="message"></textarea>
+          <textarea name="message" class="char-input"></textarea>
         </label>
+        <p>count:</p>
+        <p class="char-count"></p>
         <!-- your other form fields go here -->
         <button type="submit">Send</button>
       </form>
@@ -168,13 +169,26 @@
     <footer>
       <section class="footer-data">
         <h3>Robert Colson &middot; Associate Web Developer</h3>
-        <img src="img/39033-laptop.gif" alt="" class="footer-img" height="200" width="200"> <!-- no need to add alt text because it's for decoration --><!-- listen to 13 min about CLS concepts for adding width/height inline -->
+        <img
+          src="img/39033-laptop.gif"
+          alt=""
+          class="footer-img"
+          height="200"
+          width="200"
+        />
+        <!-- no need to add alt text because it's for decoration --><!-- listen to 13 min about CLS concepts for adding width/height inline -->
       </section>
 
-      <div class="footer-links"><a href="https://www.google.com">LinkedIn</a> - <a href="https://github.com/r-colson/">GitHub</a> - <a href="mailto:rcolson@hubspot.com">Email</a></div>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/rob-colson" target="_blank"
+          >LinkedIn</a
+        >
+        - <a href="https://github.com/r-colson/">GitHub</a> -
+        <a href="mailto:rcolson@hubspot.com">Email</a>
+      </div>
 
       <div class="footer-copyright">
-        <small>&copy; 2025 Robert Colson. All Rights Reserved.</small>
+        <p>&copy; 2026 Robert Colson. All Rights Reserved.</p>
       </div>
     </footer>
   </body>
