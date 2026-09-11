@@ -14,3 +14,12 @@ document.addEventListener('click', function(e) {
     document.querySelector(".form-container-1").style.display = "none";
   }
 });
+
+
+
+const toggleBtn = document.querySelector("#toggleBtn");
+document.documentElement.dataset.theme = "dark";
+toggleBtn.addEventListener('click', () => {
+  const toggledTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+  document.documentElement.dataset.theme = toggledTheme;
+});
