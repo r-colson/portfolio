@@ -26,6 +26,14 @@ h3 {
   --font-size: 1.3rem;
   --mono: "Oxygen mono", monospace;
   --sans: Oxygen, sans-serif;
+  --bg: var(--dkblue);
+  --navlink-color: var(--white);
+  --icon-color: var(--aqua);
+  --button-color: var(--magenta);
+}
+
+[data-theme="light"] {
+  --bg: var(--white);
 }
 
 html {
@@ -61,20 +69,6 @@ img {
   width: 100%;
 }
 
-/* variable declarations */
-:root {
-  --black: #171321;
-  --dkblue: #0d314b;
-  --plum: #4b0d49;
-  --hotmag: #ff17e4;
-  --magenta: #e310cb;
-  --aqua: #86fbfb;
-  --white: #f7f8fa;
-  --font-size: 1.3rem;
-  --mono: "Oxygen mono", monospace;
-  --sans: Oxygen, sans-serif;
-}
-
 /* navbar section */
 nav {
   font-family: var(--mono);
@@ -98,7 +92,7 @@ nav ul {
 }
 
 nav a {
-  color: var(--white);
+  color: var(--navlink-color);
   text-decoration: none;
   display: block;
 }
@@ -115,7 +109,11 @@ nav li:first-child {
 
 nav [class*="fa-"] {
   font-size: 150%;
-  color: var(--aqua);
+  color: var(--icon-color);
+}
+
+.nav-name {
+  color: var(--navlink-color);
 }
 
 .fa-solid.fa-laptop-code {
@@ -250,7 +248,7 @@ the contact section using z-index */
 
 /* projects section */
 .project-section {
-  background-color: var(--dkblue);
+  background-color: var(--bg);
 }
 
 #projects {
@@ -360,4 +358,20 @@ the contact section using z-index */
   color: #fff;
   display: none;
   text-align: center;
+}
+
+/* styling toggle button */ 
+
+button#toggleBtn.button {
+  /* Reset default button styles */
+  border: none;
+  display: block; /* If you want it to behave like a block element */
+  font-size: 90%; /* Or 1.04rem if that matches your scale */
+  color: var(--navlink-color);
+  font-family: var(--mono);
+  border-radius: 5px;
+  padding: 8px;
+  cursor: pointer;
+  width: 75.91px;
+  height: 37.66px;
 }
